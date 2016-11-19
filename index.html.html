@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Liz's HTML and CSS Exercises</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+			#Kscouttag {
+				text-align: center;
+			}
+			#benefitlist {
+				list-style-position: inside;
+				text-indent: 550px;
+			}
+			.general {
+				font-family: Helvetica;
+			}
+			.row {
+				text-align: center;
+			}
+			.jumbotron {
+				text-align: center;
+				background-color: #e0ebeb;
+			}
+			h1 {
+				color: navy;
+				font-size: 45px;
+				font-weight: bold
+			}
+			h2 {
+				text-align: center;
+				font-weight: bold;
+			}
+			p {
+				/* A comment that explains something */
+				color: #333333;
+				font-size: 15px;
+				font-family: Helvetica, sans-serif;
+			}
+			body {
+				background-color: #eeffcc;
+				margin: 10px;
+			}
+			img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 1200px;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body class="general">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" datatoggle="
+					collapse" data-target="#navbar" aria-expanded="false" ariacontrols="
+					navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Awesome Project</a>
+					</div>
+					<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#overview">Overview</a></li>
+						<li><a href="#features">Features</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<br><br><br><br>
+		<header>
+			<div class="container">
+				<div class="jumbotron">
+					<h1>Hello.</h1>
+					<p class="lead">Teach a hedgehog to code.
+					</p>
+					<p>
+						<a class="btn btn-lg btn-success" href="http://www.hedgehogwelfare.org/rescues_by_state.asp?s=IL" target="_blank"
+			role="button">Adopt</a>
+					</p>
+				</div>
+			</div>
+		</header>
+		<img src="https://www.daysoftheyear.com/wp-content/images/hedgehog-day1-e1422787687319-804x382.jpg"><br><br>
+		<p id="prettyParagraph">Hedgehogs enjoy swimming and taking baths in the sink</p>
+			<button type="button" onclick="applyStyling()">Make it pretty!</button>
+				<script>
+					function applyStyling() {
+						var paragraph = document.getElementById("prettyParagraph");
+						paragraph.style.color="grey"
+						paragraph.style.fontSize="29px";
+						paragraph.style.fontWeight="700";
+					}
+				</script>
+		<br><br><br>
+		<p id="myParagraph"></p>
+			<button type="button" onclick="document.getElementById('myParagraph').innerHTML ='But they can also be very productive developers with the right training!'">Click</button>
+		<br><br><br>
+		<p><strong>How many hedgehogs would you like?</strong></p>
+		<input id="numericInput" type="number">
+			<p id="result"></p>
+			<button type="button" onclick="testInput()">Submit adoption request</button>
+				<script>
+					function testInput() {
+					//Create variable to store test result
+					var text;
+					//Get the value of the input field with id="numb"
+					var x = document.getElementById("numericInput").value;
+					if (isNaN(x) || x < 0 || x > 99) {
+						text = "That's too many.";
+					} else {
+						text = "Great!";
+					}
+					// Display result
+					document.getElementById("result").innerHTML = text;
+				}
+				</script>
+			<br><br>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					Hedgehogs are easy to care for...
+				</div>
+				<div class="item">
+					as long as you don't have too many.
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$("#myCarousel").carousel({interval: 4000});
+				});
+			</script>
+		</div>
+		<div class=container>
+			<h2>KScout</h2>
+			<p id=Kscouttag>Kellogg's <span style="color:purple"><strong>community-driven</strong></span> knowledge sharing network</p>
+			<div class = row>
+				<div class="col-sm-4"><strong>Share</strong></div>
+				<div class="col-sm-4"><strong>Discover</strong></div>
+				<div class="col-sm-4"><strong>Develop</strong></div>
+.				<br><br>
+			<!--image is a mockup-->
+			<img src="KScout Mockup 1200 px.png">
+			<br><br>
+			<p>People come to Kellogg not just for academic & career opportunities, but for the broader development that comes from exposure to new ideas & perspectives. This kind of broader development can often get lost.  KScout changes that.</p>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div>
+			<h2>KScout verion 1</h2>
+			<p id=Kscouttag>Kellogg's <span style="color:purple"><strong>community-driven</strong></span> knowledge sharing network</p>
+			<ul style="list-style-type:square" id=benefitlist>
+				<li>Share</li>
+				<li>Discover</li>
+				<li>Develop</li>
+			</ul>
+			<!--image is a mockup-->
+			<img src="KScout Mockup 1200 px.png">
+		</div>
+		<h1>PRACTICE AREA: This is a top level header</h1>
+			<p>I <strong>am</strong> a paragraph</p><br><br>
+			<a href="http://www.google.com" target="_blank">I will open Google in a new tab</a><br><br>
+	<script>
+		var result = 5 + 3;
+		alert("5+3 is " + result);
+	</script>
+	</body>
+</html>
